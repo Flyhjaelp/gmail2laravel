@@ -26,7 +26,7 @@ class Gmail2LaravelServiceProvider extends ServiceProvider
 
         $this->app->singleton(Gmail2Laravel::class, function ($app, $arg) {
 
-            return new Gmail2Laravel($arg);
+            return new Gmail2Laravel($arg[0]);
 
         });
 
