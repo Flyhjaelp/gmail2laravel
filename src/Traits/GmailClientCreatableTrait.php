@@ -65,11 +65,14 @@ trait GmailClientCreatableTrait
     protected function setGMailScopes(Google_Client  $client) : Google_Client
     {
         $client->setScopes([
-            'https://www.googleapis.com/auth/admin.directory.user',
-            'https://www.googleapis.com/auth/admin.directory.group',
-            'https://mail.google.com/',
-            'https://mail.google.com/auth/gmail.modify',
-            'https://mail.google.com/auth/gmail.readonly',
+            "https://www.googleapis.com/auth/admin.directory.user",
+            "https://www.googleapis.com/auth/admin.directory.group",
+            Google_Service_Gmail::MAIL_GOOGLE_COM,
+            Google_Service_Gmail::GMAIL_READONLY,
+            Google_Service_Gmail::GMAIL_COMPOSE,
+            Google_Service_Gmail::GMAIL_INSERT,
+            Google_Service_Gmail::GMAIL_LABELS,
+            Google_Service_Gmail::GMAIL_MODIFY,
         ]);
 
         return $client;
