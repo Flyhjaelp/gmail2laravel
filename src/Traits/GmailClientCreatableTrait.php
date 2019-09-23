@@ -74,7 +74,7 @@ trait GmailClientCreatableTrait
             Google_Service_Gmail::GMAIL_LABELS,
             Google_Service_Gmail::GMAIL_MODIFY,
         ]);
-
+        
         return $client;
     }
 }
